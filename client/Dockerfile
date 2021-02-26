@@ -7,7 +7,5 @@ RUN npm install
 COPY . ./
 
 FROM deps AS development
-RUN npm run build
 EXPOSE 3000
-
 CMD "npm" "run" "dev"

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "lib": ["esnext", "esnext.asynciterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "include": ["./@types", "./src", "./__tests__"]
+}

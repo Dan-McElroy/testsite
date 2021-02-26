@@ -1,17 +1,25 @@
-import { ApolloServer } from "apollo-server";
-import { typeDefs } from "./schema";
+import { ApolloServer, gql } from "apollo-server";
+//import { typeDefs } from "./schema";
+//import resolvers from "./schema/resolvers";
+
+const typeDefs = gql`
+  type Blog {
+    id: String!
+    title: String!
+    date: String!
+    content: String!
+  }
+
+  type Query {
+    blogs: [Blog]
+  }
+`;
 
 const resolvers = {
   Query: {
     blogs: () => blogs,
   },
 };
-
-const server = new ApolloServer({ typeDefs, resolvers });
-
-server.listen().then(({ url }) => {
-  console.log(`Server ready at ${url}`);
-});
 
 const blogs = [
   {
@@ -27,3 +35,9 @@ const blogs = [
     content: "This is another test",
   },
 ];
+
+const server = new ApolloServer({ typeDefs, resolvers });
+
+server.listen(4000).then(({ url }) => {
+  console.log(`Server ready at ${url}`);
+});

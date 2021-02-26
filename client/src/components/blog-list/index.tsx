@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import { UnorderedList } from "../../styled";
 
 const GetBlogPosts = gql`
-  query GetBlogPosts {
+  {
     blogs {
       title
       id

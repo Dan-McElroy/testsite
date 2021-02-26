@@ -5,7 +5,7 @@ services:
       context: ./server
       target: development
     volumes:
-      - ./server/opt/app
+      - ./server:/opt/app
       - /opt/app/node_modules
     ports:
       - 4000:4000
@@ -19,6 +19,6 @@ services:
       - ./client:/opt/app:cached
       - /opt/app/node_modules
     ports:
-      - 3000:000
+      - 3000:3000
     env_file:
       - docker-compose.env
