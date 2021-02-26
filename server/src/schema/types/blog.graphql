@@ -1,0 +1,6 @@
+type Blog {
+  id: String!
+  title: String!
+  date: String!
+  content: String!
+}
