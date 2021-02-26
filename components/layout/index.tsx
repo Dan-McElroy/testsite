@@ -7,9 +7,9 @@ import {
   HomeLinkContainer,
   CircleImage,
   Heading2X1,
-  HeadingLarge,
   AColourInherit,
 } from "./styled";
+import { HeadingLarge } from "../../styled";
 
 const name = "Dan McElroy";
 export const siteTitle = "Dan's Test Site";
