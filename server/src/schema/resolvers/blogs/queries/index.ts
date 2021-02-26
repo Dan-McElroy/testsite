@@ -1,4 +1,4 @@
-const blogs = [
+const tempData = [
   {
     title: "Test 1",
     id: "1111",
@@ -13,4 +13,4 @@ const blogs = [
   },
 ];
 
-export const getAllBlogs = () => blogs;
+export const blogs = () => tempData;

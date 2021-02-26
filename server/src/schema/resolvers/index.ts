@@ -1,8 +1,8 @@
-import { getAllBlogs } from "./blogs/queries";
+import { blogs } from "./blogs/queries";
 
 const resolvers = {
   Query: {
-    ...getAllBlogs,
+    blogs,
   },
 };
 
