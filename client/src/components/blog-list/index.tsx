@@ -15,7 +15,7 @@ const GetBlogPosts = gql`
 const BlogList: React.FC = () => {
   const { loading, error, data } = useQuery(GetBlogPosts);
 
-  if (!loading) {
+  if (loading) {
     return <p>Loading...</p>;
   }
   if (error) {
