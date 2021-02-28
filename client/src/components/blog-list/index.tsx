@@ -5,9 +5,9 @@ import { UnorderedList } from "../../styled";
 const GetBlogPosts = gql`
   {
     blogs {
-      title
       id
       date
+      title
     }
   }
 `;
@@ -19,7 +19,7 @@ const BlogList: React.FC = () => {
     return <p>Loading...</p>;
   }
   if (error) {
-    return <p>Error: error</p>;
+    return <p>Error: ${error.message}</p>;
   }
 
   return (
